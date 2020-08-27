@@ -1,0 +1,31 @@
+# ComDependency_41309
+
+Reproducer for [Single-File Executable Cannot Use Registration Free COM Interop in .NET 5-Preview 7 #41309](https://github.com/dotnet/runtime/issues/41309)
+
+## Instructions
+
+Use Visual Studio 2019 Preview
+
+Open solution and build Debug/Release AnyCPU/x64 configuration (Release x64 for disambiguation)
+
+Run App.exe - SUCCEESS
+
+Note that App\bin\Release\net5.0\App.dll.manifest is generated about right, with registration free COM elements
+
+Unregister Lib.dll
+
+Run App.exe - FAILURE
+
+### Using Publish
+
+Use App\Properties\PublishProfiles\FolderProfile.pubxml
+
+App\bin\Release\net5.0\win-x64\App.dll.manifest is generated about right
+
+lib.dll is copied to target folder
+
+Run App.exe - FAILURE
+
+Register Lib.dll
+
+Run App.exe - SUCCESS

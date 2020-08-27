@@ -29,3 +29,19 @@ Run App.exe - FAILURE
 Register Lib.dll
 
 Run App.exe - SUCCESS
+
+## Workaround
+
+Set Isolated = False for the COM dependency
+
+See added app.manifest to the App project; note <file> element added to the default (template) manifest
+
+Build/publish App
+
+Note correct manifest in the produced singlefilehost App.exe
+
+Copy x64\Release\Lib.dll to App\bin\Release\net5.0\win-x64 directory
+
+Unregister Lib.dll
+
+Run App.exe - SUCCESS

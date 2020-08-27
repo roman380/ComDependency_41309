@@ -20,7 +20,9 @@
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>false</Isolated>
+      <Isolated>true</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+      <Private>true</Private>
     </COMReference>
   </ItemGroup>
 

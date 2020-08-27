@@ -1,0 +1,8 @@
+*.bak
+*.aps
+*.user
+.vs
+/x64
+/Lib/x64
+/App/bin
+/App/obj

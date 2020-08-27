@@ -1,0 +1,37 @@
+// Lib.idl : IDL source for Lib
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Lib.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(0b38dbfe-e56b-447e-a4c5-54cda3ddc1b8),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IObj : IDispatch
+{
+	[id(1)] HRESULT Add([in] LONG A, [in] LONG B, [out, retval] LONG* C);
+};
+[
+	uuid(3b6fbd23-f8ba-474c-aaee-a2456c9b6ddf),
+	version(1.0),
+]
+library LibLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(67be8cb7-49f7-4fa2-8913-9facb87483cb)
+	]
+	coclass Obj
+	{
+		[default] interface IObj;
+	};
+};
+
+import "shobjidl.idl";

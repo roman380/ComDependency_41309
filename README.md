@@ -4,7 +4,7 @@ Reproducer for [Single-File Executable Cannot Use Registration Free COM Interop 
 
 ## Instructions
 
-Use Visual Studio 2019 Preview
+Use Visual Studio 2019 Preview, start Visual Studio "As Administrator" - you should see [Preview|Admin] in the top right corner of the application
 
 Open solution and build Debug/Release AnyCPU/x64 configuration (Release x64 for disambiguation)
 
